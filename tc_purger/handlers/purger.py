@@ -30,6 +30,7 @@ class UrlPurgerHandler(ImagingHandler):
 
         if exists:
             self.context.modules.storage.remove(imageurl)
+            self.context.modules.result_storage.remove(imageurl)
             self.set_status(204)
         else:
             self._error(404, 'Image not found at the given URL')
