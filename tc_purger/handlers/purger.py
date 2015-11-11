@@ -12,7 +12,8 @@ from thumbor.handlers.imaging import ImagingHandler
 
 
 class UrlPurgerHandler(ImagingHandler):
-    def regex(self):
+    @classmethod
+    def regex(cls):
         '''
         :return: The regex used for routing.
         :rtype: string
